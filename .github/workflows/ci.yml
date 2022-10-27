@@ -5,7 +5,7 @@ on:
   branches: ["main","development"]
 
   jobs:
-    flutter test:
+    flutter_test:
       name: run flutter test and build apk
       runs-on: ubuntu-latest
       steps:
