@@ -2,7 +2,7 @@ name : CI
 on:
   pull request:
   branches:
-  -master 
+  -main
 
   jobs:
     flutter test:
