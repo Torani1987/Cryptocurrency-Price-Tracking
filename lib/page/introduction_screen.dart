@@ -29,7 +29,9 @@ class _introductionState extends State<introduction> {
           body:
               'You can track the price of cryptocurrency with livestreaming data price',
           image: Image.network(
-              'https://static.vecteezy.com/system/resources/previews/005/084/685/non_2x/to-the-moon-concept-of-cryptocurrency-growth-man-ride-the-rocket-coin-to-the-moon-free-vector.jpg'),
+            'https://img.freepik.com/free-vector/gradient-cryptocurrency-concept-with-wallet_23-2149154182.jpg?w=740&t=st=1666880340~exp=1666880940~hmac=e24b065518837b5a8f6ee67d6cad0393a530b04a18e7757dfe2f102682f1f3dc',
+            width: 350,
+          ),
           decoration: pageDecoration,
         ),
         PageViewModel(
@@ -43,7 +45,7 @@ class _introductionState extends State<introduction> {
           title: 'News',
           body: 'You can find news about Cryptocurrency with up to date  news',
           image: Image.network(
-              'https://static.vecteezy.com/system/resources/previews/003/415/654/non_2x/news-media-concept-with-icon-set-template-banner-free-vector.jpg'),
+              'https://img.freepik.com/free-vector/attention-attraction-important-announcement-warning-information-sharing-latest-news-loudspeaker-megaphone-bullhorn-with-exclamation-mark-vector-isolated-concept-metaphor-illustration_335657-2809.jpg?w=740&t=st=1666879643~exp=1666880243~hmac=3bab199814f19b036708f1e16c89e63e1b5abd6301d4a109173eacca63d39cc3'),
           decoration: pageDecoration,
         )
       ],

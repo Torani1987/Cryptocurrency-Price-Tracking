@@ -2,12 +2,15 @@ import 'package:crypto_app_pi/page/aboutMe.dart';
 import 'package:crypto_app_pi/page/constants.dart';
 import 'package:crypto_app_pi/page/introduction_screen.dart';
 import 'package:crypto_app_pi/page/news_page.dart';
+import 'package:crypto_app_pi/page/news_view.dart';
+import 'package:crypto_app_pi/page/profitCalculator.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-
+import 'package:get/get.dart';
 import 'package:crypto_app_pi/page/home_screen.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -15,7 +18,7 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
           useMaterial3: true,
           iconTheme: const IconThemeData(color: Colors.white),
@@ -46,7 +49,7 @@ class _mainPageState extends State<mainPage> {
   int currentIndex = 0;
   List pages = [
     HomeScreen(),
-    newsPage(),
+    NewsView(),
   ];
   void onTap(int index) {
     setState(() {});

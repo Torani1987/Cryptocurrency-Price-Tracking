@@ -1,4 +1,4 @@
-import 'package:crypto_app_pi/aboutMe.dart';
+import 'package:crypto_app_pi/page/aboutMe.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

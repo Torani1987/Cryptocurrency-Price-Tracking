@@ -1,4 +1,4 @@
-import 'package:crypto_app_pi/constants.dart';
+import 'package:crypto_app_pi/page/constants.dart';
 import 'package:crypto_app_pi/widget/background.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,30 +16,6 @@ class aboutMe extends StatelessWidget {
           CircleAvatar(
             radius: 50.0,
             backgroundImage: AssetImage('images/test.jpeg'),
-          ),
-          Text(
-            'Nama : Mohamad Rahmat Torani',
-            style: GoogleFonts.raleway(
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            'NPM : 53419788',
-            style: GoogleFonts.raleway(
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          Text(
-            'Kelas : 3IA02',
-            style: GoogleFonts.raleway(
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.bold,
-            ),
           ),
           Padding(
             padding: const EdgeInsets.all(25.0),

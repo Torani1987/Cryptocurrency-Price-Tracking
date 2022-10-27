@@ -34,9 +34,12 @@ class _DetailScreenState extends State<DetailScreen> {
                           Navigator.pop(context);
                         },
                         icon: const Icon(Icons.arrow_back_ios_rounded)),
-                    Text(
-                      widget.coin.name!,
-                      style: const TextStyle(color: Colors.black, fontSize: 18),
+                    Flexible(
+                      child: Text(
+                        widget.coin.name!,
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 18),
+                      ),
                     ),
                     IconButton(
                         onPressed: () {},
@@ -103,12 +106,14 @@ class _DetailScreenState extends State<DetailScreen> {
                     const SizedBox(
                       width: 10,
                     ),
-                    Text(
-                      '${widget.coin.name!} (${widget.coin.symbol!.toUpperCase()})',
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                    Flexible(
+                      child: Text(
+                        '${widget.coin.name!} (${widget.coin.symbol!.toUpperCase()})',
+                        style: const TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
                     )
                   ],
                 ),

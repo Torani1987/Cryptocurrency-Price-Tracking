@@ -1,4 +1,4 @@
-import 'package:crypto_app_pi/constants.dart';
+import 'package:crypto_app_pi/page/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 import 'package:crypto_app_pi/model/coin.dart';

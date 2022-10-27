@@ -1,27 +1,39 @@
-class News {
-  final String title;
-  final String link;
-  final String content;
-  final String pubDate;
-  final String imageUrl;
-  final String source_id;
-  const News({
+class Articles {
+  String? title;
+  String? description;
+  String? urlToImage;
+  String? content;
+  String? publishedAt;
+  String? Author;
+  String? url;
+
+  Articles({
     required this.title,
-    required this.link,
+    required this.description,
+    required this.urlToImage,
+    required this.Author,
     required this.content,
-    required this.pubDate,
-    required this.imageUrl,
-    required this.source_id,
+    required this.publishedAt,
+    required this.url,
   });
 
-  factory News.fromJson(Map<String, dynamic> json) {
-    return News(
-      title: json['title'],
-      link: json['link'],
-      content: json['content'],
-      pubDate: json['pubDate'],
-      imageUrl: json['imageUrl'],
-      source_id: json['source_id'],
-    );
+  Articles.fromjson(Map<String, dynamic> json) {
+    this.title = json["title"];
+    this.description = json["description"];
+    this.Author = json["author"];
+    this.content = json["content"];
+    this.url = json["url"];
+    this.urlToImage = json["urlToImage"];
+  }
+}
+
+class NewsModel {
+  List<Articles>? articles;
+
+  NewsModel({this.articles});
+
+  NewsModel.fromjson(Map<String, dynamic> json) {
+    this.articles =
+        (json["articles"] as List).map((e) => Articles.fromjson(e)).toList();
   }
 }

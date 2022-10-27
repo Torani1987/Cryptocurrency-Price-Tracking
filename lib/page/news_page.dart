@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'dart:ui';
-import 'package:crypto_app_pi/sideBar.dart';
+import 'package:crypto_app_pi/page/sideBar.dart';
 import 'package:http/http.dart' as http;
 import 'package:crypto_app_pi/model/news.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'detail_news.dart';
-import 'main.dart';
-import 'package:crypto_app_pi/constants.dart';
+import 'package:crypto_app_pi/main.dart';
+import 'package:crypto_app_pi/page/constants.dart';
 import 'package:flutter/material.dart';
 
 class newsPage extends StatefulWidget {
@@ -35,14 +35,13 @@ class _newsPageState extends State<newsPage> {
               filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
               child: AppBar(
                 backgroundColor: Colors.black.withOpacity(.2),
-                title: Text(
-                  'News',
-                  style: Theme.of(context).textTheme.titleLarge,
-                ),
+                title:
+                    Text('News', style: Theme.of(context).textTheme.titleLarge),
               ),
             ),
           ),
         ),
+        extendBodyBehindAppBar: true,
         body: ListView.builder(
             itemCount: _posts.length,
             itemBuilder: (context, index) {

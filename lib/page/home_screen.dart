@@ -1,5 +1,6 @@
 import 'dart:ui';
-import 'package:crypto_app_pi/sideBar.dart';
+import 'package:crypto_app_pi/page/searchBar.dart';
+import 'package:crypto_app_pi/page/sideBar.dart';
 import 'package:crypto_app_pi/widget/chart.dart';
 import 'package:crypto_app_pi/widget/background.dart';
 import 'detail_screen.dart';
@@ -19,12 +20,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late Future<List<Coin>> _future;
   @override
-  void initState() {
-    _future = fetchData();
-    super.initState();
-  }
+  final FetchCoin _fetchCoin = FetchCoin();
 
   //* loading Animation
   final spinkit = const SpinKitThreeBounce(
@@ -137,6 +134,14 @@ class _HomeScreenState extends State<HomeScreen> {
               centerTitle: false,
               actions: [
                 IconButton(
+                    onPressed: (() {
+                      showSearch(context: context, delegate: SearchCoin());
+                    }),
+                    icon: const Icon(
+                      Icons.search,
+                      color: Colors.black,
+                    )),
+                IconButton(
                     onPressed: () {
                       showCustomDialog();
                     },
@@ -152,7 +157,7 @@ class _HomeScreenState extends State<HomeScreen> {
       extendBodyBehindAppBar: true,
       body: Background(
         child: FutureBuilder<List<Coin>>(
-          future: _future,
+          future: _fetchCoin.getcoinList(),
           builder: (context, snapshot) {
             final data = snapshot.data;
             if (snapshot.hasData) {
@@ -228,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen> {
             } else if (snapshot.hasError) {
               throw snapshot.error.toString();
             }
-            return Center(child: spinkit);
+            return Center(child: CircularProgressIndicator());
           },
         ),
       ),

@@ -1,6 +1,6 @@
-import 'package:crypto_app_pi/constants.dart';
+import 'package:crypto_app_pi/page/constants.dart';
 import 'package:flutter/material.dart';
-import 'main.dart';
+import 'package:crypto_app_pi/main.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Detail extends StatelessWidget {
