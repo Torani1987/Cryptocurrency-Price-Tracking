@@ -1,12 +1,11 @@
-name : CI 
+name : Dart
 on:
-  pull request:
-  branches:
-  -main
+  push:
+  branches: ["main","development"]
 
   jobs:
     flutter test:
-    name: Run flutter test and analyze 
+    name: run flutter test and build apk
     runs-on: Ubuntu-latest
     steps:
       - uses: actions/checkout@v2
